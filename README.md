@@ -64,12 +64,12 @@ crontab -l
 
 ## 5. 说明
 
-- 股票范围：基于 Finviz（仅普通股，交易所分别抓取 NASDAQ 和 NYSE）。
+- 股票范围：基于 TradingView Scanner（NASDAQ/NYSE + Common Stock）。
 - 策略条件：
 	1. `Market Cap >= 40B USD`
 	2. `Average Volume 10D >= 130% * Average Volume 30D`
 	3. `Exchange in {NASDAQ, NYSE}`
 	4. `Common stock only`
 	5. `1-day High <= 90% of 52-week High`（即距 52W High 至少低 10%）
-- 技术数据来源：Stooq 日线数据（用于计算 10/30 日均量、1日最高价、52周最高价）。
+- 技术数据来源：TradingView Scanner 字段（用于 10/30 日均量、1 日最高价、52 周最高价）。
 - 邮件内容：按市值从高到低排序，包含均量和 52 周高点距离等指标。
